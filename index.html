@@ -337,9 +337,12 @@
     <div style="font-size:12.5px; letter-spacing:.34em; text-transform:uppercase; color:#9d5a3a; margin-bottom:24px;">Enquiries</div>
     <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:62px; line-height:1.04; margin:0 0 26px; letter-spacing:-.01em; text-wrap:balance;">Interested in a piece<br>from Feast?</h2>
     <p style="margin:0 auto 44px; max-width:520px; font-weight:300; font-size:18px; line-height:1.9; color:#544c41;">Paintings are available for purchase. Get in touch to enquire about a particular work, pricing, or to arrange a viewing.</p>
-    <a href="mailto:hello@cassiskinner.com.au?subject=Enquiry%20about%20Feast" style="display:inline-block; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#f4efe6; background:#28241e; text-decoration:none; padding:18px 40px;">Get in touch</a>
+    <div style="display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap;">
+      <div onClick="{{ openGeneralEnquiry }}" style="font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#f4efe6; background:#28241e; padding:18px 40px; cursor:pointer;">Make an enquiry</div>
+      <a href="{{ emailHref }}" style="font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#28241e; background:transparent; border:1px solid #28241e; text-decoration:none; padding:17px 40px;">Email me</a>
+    </div>
     <div style="display:flex; gap:30px; justify-content:center; align-items:center; margin-top:46px; flex-wrap:wrap;">
-      <a data-r="underline" href="mailto:hello@cassiskinner.com.au" style="font-size:14px; color:#3a342c; text-decoration:none; letter-spacing:.02em;">hello@cassiskinner.com.au</a>
+      <a data-r="underline" href="{{ emailHref }}" style="font-size:14px; color:#3a342c; text-decoration:none; letter-spacing:.02em;">{{ emailAddr }}</a>
       <span style="width:4px; height:4px; border-radius:50%; background:#c3b9a8;"></span>
       <a data-r="underline" href="https://www.instagram.com/createdbycassi" target="_blank" rel="noopener" style="font-size:14px; color:#3a342c; text-decoration:none; letter-spacing:.02em;">@createdbycassi</a>
     </div>
@@ -376,11 +379,13 @@
         <div onClick="{{ closeEnquiry }}" style="position:absolute; top:16px; right:22px; font-size:28px; font-weight:300; cursor:pointer; line-height:1; color:#6d655a;">×</div>
         <div style="font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:#9d5a3a; margin-bottom:14px;">Enquire</div>
         <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:29px; line-height:1.15; color:#28241e;">{{ enquiryTitle }}</div>
-        <div style="font-size:12.5px; color:#8a8073; margin-top:8px;">{{ enquiryMeta }} · {{ enquiryPrice }}</div>
+        <sc-if value="{{ enquiryHasSub }}" hint-placeholder-val="{{ true }}">
+          <div style="font-size:12.5px; color:#8a8073; margin-top:8px;">{{ enquirySub }}</div>
+        </sc-if>
         <sc-if value="{{ enquirySent }}" hint-placeholder-val="{{ false }}">
           <div style="margin-top:26px;">
             <div style="font-family:'Cormorant Garamond',serif; font-size:27px; color:#28241e;">Thank you.</div>
-            <p style="font-weight:300; font-size:14.5px; line-height:1.75; color:#544c41; margin:12px 0 24px;">Your enquiry about <em style="font-style:italic;">{{ enquiryTitle }}</em> has been sent. Cassi will be in touch as soon as possible.</p>
+            <p style="font-weight:300; font-size:14.5px; line-height:1.75; color:#544c41; margin:12px 0 24px;">{{ enquiryThanks }}</p>
             <div onClick="{{ closeEnquiry }}" style="display:inline-block; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:#f4efe6; background:#28241e; padding:13px 30px; cursor:pointer;">Close</div>
           </div>
         </sc-if>
@@ -393,11 +398,11 @@
             <input type="tel" name="mobile" placeholder="Mobile number" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%;">
             <textarea name="message" rows="4" placeholder="Your message (optional)" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%; resize:vertical;"></textarea>
             <sc-if value="{{ enquiryError }}" hint-placeholder-val="{{ false }}">
-              <div style="font-size:12.5px; line-height:1.6; color:#a4432c;">Sorry — something went wrong sending your enquiry. Please try again, or email <a href="mailto:hello@cassiskinner.com.au" style="color:#a4432c;">hello@cassiskinner.com.au</a>.</div>
+              <div style="font-size:12.5px; line-height:1.6; color:#a4432c;">Sorry — something went wrong sending your enquiry. Please try again, or email <a href="{{ emailHref }}" style="color:#a4432c;">{{ emailAddr }}</a>.</div>
             </sc-if>
             <button type="submit" disabled="{{ enquirySending }}" style="font-family:'Jost',sans-serif; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:#f4efe6; background:#28241e; border:none; padding:15px; cursor:pointer;">{{ enquirySendLabel }}</button>
           </form>
-          <div style="font-size:11px; color:#9b9183; margin-top:16px; line-height:1.6;">Prefer email? <a href="mailto:hello@cassiskinner.com.au?subject=Feast%20enquiry" style="color:#9d5a3a; text-decoration:none;">hello@cassiskinner.com.au</a></div>
+          <div style="font-size:11px; color:#9b9183; margin-top:16px; line-height:1.6;">Prefer email? <a href="{{ emailHref }}" style="color:#9d5a3a; text-decoration:none;">{{ emailAddr }}</a></div>
         </sc-if>
       </div>
     </div>
@@ -407,7 +412,12 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;heroImage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Satisfied&quot;,&quot;options&quot;:[&quot;Finished&quot;,&quot;Satisfied&quot;,&quot;Seasoned&quot;,&quot;Mise en Place&quot;,&quot;Mapleton Public House&quot;,&quot;Tres a Cinco&quot;,&quot;Nice Catch&quot;,&quot;Eggs &amp; Flour&quot;,&quot;Tomahawk&quot;,&quot;Hot &amp; Cold&quot;,&quot;Croissant&quot;,&quot;Croissant Finished&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;galleryLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Two per row&quot;,&quot;options&quot;:[&quot;One per row&quot;,&quot;Two per row&quot;,&quot;Three per row&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
-  state = { scrolled: false, menuOpen: false, lightboxIndex: null, enquiryIndex: null, enquirySending: false, enquirySent: false, enquiryError: false, winW: (typeof window !== "undefined" ? window.innerWidth : 1280) };
+  state = { scrolled: false, menuOpen: false, lightboxIndex: null, enquiryIndex: null, generalEnquiry: false, enquirySending: false, enquirySent: false, enquiryError: false, winW: (typeof window !== "undefined" ? window.innerWidth : 1280) };
+
+  // Built from parts so the address never appears as a literal in the page HTML
+  // (defeats Cloudflare "email protection" rewriting the mailto into a broken /cdn-cgi link).
+  emailUser = "hello";
+  emailDomain = "cassiskinner.com.au";
 
   works = [
     { title: "Finished",              src: "assets/cleared.jpg",                        resId: "cleared",         heroPos: "center 45%", meta: "Oil on Canvas · 40.7 × 30.5 cm (16 × 12 in)",  price: "$650" },
@@ -462,8 +472,9 @@ class Component extends DCLogic {
   toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
   closeMenu = () => this.setState({ menuOpen: false });
 
-  openEnquiry = (i) => { const w = this.works[i]; this.track("enquiry_open", { currency: "AUD", value: this.priceValue(w), item_name: w.title }); this.setState({ enquiryIndex: i, lightboxIndex: null, menuOpen: false, enquirySent: false, enquiryError: false, enquirySending: false }); };
-  closeEnquiry = () => this.setState({ enquiryIndex: null });
+  openEnquiry = (i) => { const w = this.works[i]; this.track("enquiry_open", { currency: "AUD", value: this.priceValue(w), item_name: w.title }); this.setState({ enquiryIndex: i, generalEnquiry: false, lightboxIndex: null, menuOpen: false, enquirySent: false, enquiryError: false, enquirySending: false }); };
+  openGeneralEnquiry = () => { this.track("enquiry_open", { item_name: "General enquiry" }); this.setState({ generalEnquiry: true, enquiryIndex: null, lightboxIndex: null, menuOpen: false, enquirySent: false, enquiryError: false, enquirySending: false }); };
+  closeEnquiry = () => this.setState({ enquiryIndex: null, generalEnquiry: false });
   // Submit via fetch so the visitor stays on-site and sees an inline success message (no Formspree page).
   submitEnquiry = (ev) => {
     ev.preventDefault();
@@ -474,7 +485,7 @@ class Component extends DCLogic {
     fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } })
       .then((r) => {
         if (r.ok) {
-          this.track("generate_lead", { currency: "AUD", value: w ? this.priceValue(w) : undefined, item_name: w ? w.title : undefined });
+          this.track("generate_lead", { currency: "AUD", value: w ? this.priceValue(w) : undefined, item_name: w ? w.title : "General enquiry" });
           this.setState({ enquirySent: true, enquirySending: false });
         } else this.setState({ enquiryError: true, enquirySending: false });
       })
@@ -492,10 +503,12 @@ class Component extends DCLogic {
   enquireActive = (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); if (this.state.lightboxIndex !== null) this.openEnquiry(this.state.lightboxIndex); };
 
   renderVals() {
-    const { scrolled, menuOpen, lightboxIndex, enquiryIndex } = this.state;
+    const { scrolled, menuOpen, lightboxIndex, enquiryIndex, generalEnquiry } = this.state;
     const open = lightboxIndex !== null;
     const active = open ? this.works[lightboxIndex] : null;
     const enq = enquiryIndex !== null ? this.works[enquiryIndex] : null;
+    const emailAddr = this.emailUser + "@" + this.emailDomain;
+    const emailHref = "mailto:" + emailAddr;
 
     // — Tweakable hero image (rendered as an element so no literal src hole streams) —
     const heroTitle = this.props.heroImage ?? "Satisfied";
@@ -520,20 +533,26 @@ class Component extends DCLogic {
       ...openers,
       enquire: this.enquire,
       enquireActive: this.enquireActive,
+      openGeneralEnquiry: this.openGeneralEnquiry,
       closeEnquiry: this.closeEnquiry,
       submitEnquiry: this.submitEnquiry,
       stopEnq: (e) => e.stopPropagation(),
-      enquiryOpen: enq !== null,
-      enquiryFormVisible: enq !== null && !this.state.enquirySent,
+      emailAddr,
+      emailHref,
+      enquiryOpen: (enq !== null) || generalEnquiry,
+      enquiryFormVisible: ((enq !== null) || generalEnquiry) && !this.state.enquirySent,
       enquirySent: this.state.enquirySent,
       enquiryError: this.state.enquiryError,
       enquirySending: this.state.enquirySending,
       enquirySendLabel: this.state.enquirySending ? "Sending…" : "Send enquiry",
-      enquiryTitle: enq ? enq.title : "",
-      enquiryMeta: enq ? enq.meta : "",
-      enquiryPrice: enq ? enq.price : "",
-      enquirySubject: enq ? ("Feast enquiry: " + enq.title) : "",
-      enquiryDetails: enq ? (enq.title + " — " + enq.meta + " — " + enq.price) : "",
+      enquiryTitle: enq ? enq.title : "Make an enquiry",
+      enquiryHasSub: enq !== null,
+      enquirySub: enq ? (enq.meta + " · " + enq.price) : "",
+      enquiryThanks: enq
+        ? ("Your enquiry about " + enq.title + " has been sent. Cassi will be in touch as soon as possible.")
+        : "Your enquiry has been sent. Cassi will be in touch as soon as possible.",
+      enquirySubject: enq ? ("Feast enquiry: " + enq.title) : "Feast — general enquiry",
+      enquiryDetails: enq ? (enq.title + " — " + enq.meta + " — " + enq.price) : "General enquiry",
       heroImg,
       galleryCols,
       galleryMaxW,
