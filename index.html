@@ -145,15 +145,18 @@
   [data-r="underline"]:hover::after { transform: scaleX(0); transform-origin:right; }
   /* gallery column count is JS-driven (heroImage / galleryLayout props + viewport cap) */
   @media (max-width: 920px) {
-    [data-r="navlinks"] { display: none !important; }
-    [data-r="hamburger"] { display: flex !important; }
-    [data-r="hero-title"] { font-size: 16vw !important; line-height: .98 !important; }
-    [data-r="intro"] { grid-template-columns: 1fr !important; gap: 26px !important; padding-left: 26px !important; padding-right: 26px !important; }
-    [data-r="about"] { grid-template-columns: 1fr !important; gap: 40px !important; }
-    [data-r="about-portrait"] { max-width: 340px !important; }
-    [data-r="pad"] { padding-left: 26px !important; padding-right: 26px !important; }
-    [data-r="hero-inner"] { left: 26px !important; right: 26px !important; bottom: 40px !important; }
-    [data-r="header"] { padding-left: 26px !important; padding-right: 26px !important; }
+    [data-r~="navlinks"] { display: none !important; }
+    [data-r~="hamburger"] { display: flex !important; }
+    /* full-height hero on mobile (dvh falls back to vh where unsupported) */
+    #top { height: 100vh !important; min-height: 100vh !important; height: 100dvh !important; min-height: 100dvh !important; }
+    [data-r~="hero-title"] { font-size: 16vw !important; line-height: .98 !important; }
+    [data-r~="hero-inner"] { left: 26px !important; right: 26px !important; bottom: 40px !important; }
+    /* intro + about: single column, tighter spacing */
+    [data-r~="intro"] { grid-template-columns: 1fr !important; gap: 20px !important; padding: 64px 26px 56px !important; }
+    [data-r~="about"] { grid-template-columns: 1fr !important; gap: 28px !important; padding: 64px 26px !important; }
+    [data-r~="about-portrait"] { max-width: 340px !important; }
+    [data-r~="pad"] { padding-left: 26px !important; padding-right: 26px !important; }
+    [data-r~="header"] { padding-left: 26px !important; padding-right: 26px !important; }
   }
 </style>
 </helmet>
