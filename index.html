@@ -271,16 +271,28 @@
         <div style="font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:#9d5a3a; margin-bottom:14px;">Enquire</div>
         <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:29px; line-height:1.15; color:#28241e;">{{ enquiryTitle }}</div>
         <div style="font-size:12.5px; color:#8a8073; margin-top:8px;">{{ enquiryMeta }} · {{ enquiryPrice }}</div>
-        <form action="https://formspree.io/f/xgojblzj" method="POST" style="margin-top:24px; display:flex; flex-direction:column; gap:13px;">
-          <input type="hidden" name="_subject" value="{{ enquirySubject }}">
-          <input type="hidden" name="Artwork" value="{{ enquiryDetails }}">
-          <input type="hidden" name="_next" value="https://cassiskinner.com.au/#gallery">
-          <input type="text" name="name" required placeholder="Your name" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%;">
-          <input type="email" name="email" required placeholder="Email address" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%;">
-          <textarea name="message" rows="4" placeholder="Your message (optional)" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%; resize:vertical;"></textarea>
-          <button type="submit" style="font-family:'Jost',sans-serif; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:#f4efe6; background:#28241e; border:none; padding:15px; cursor:pointer;">Send enquiry</button>
-        </form>
-        <div style="font-size:11px; color:#9b9183; margin-top:16px; line-height:1.6;">Prefer email? <a href="mailto:hello@cassiskinner.com.au?subject=Feast%20enquiry" style="color:#9d5a3a; text-decoration:none;">hello@cassiskinner.com.au</a></div>
+        <sc-if value="{{ enquirySent }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:26px;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:27px; color:#28241e;">Thank you.</div>
+            <p style="font-weight:300; font-size:14.5px; line-height:1.75; color:#544c41; margin:12px 0 24px;">Your enquiry about <em style="font-style:italic;">{{ enquiryTitle }}</em> has been sent. Cassi will be in touch as soon as possible.</p>
+            <div onClick="{{ closeEnquiry }}" style="display:inline-block; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:#f4efe6; background:#28241e; padding:13px 30px; cursor:pointer;">Close</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ enquiryFormVisible }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submitEnquiry }}" action="https://formspree.io/f/xgojblzj" method="POST" style="margin-top:24px; display:flex; flex-direction:column; gap:13px;">
+            <input type="hidden" name="_subject" value="{{ enquirySubject }}">
+            <input type="hidden" name="Artwork" value="{{ enquiryDetails }}">
+            <input type="text" name="name" required placeholder="Your name" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%;">
+            <input type="email" name="email" required placeholder="Email address" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%;">
+            <input type="tel" name="mobile" placeholder="Mobile number" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%;">
+            <textarea name="message" rows="4" placeholder="Your message (optional)" style="font-family:'Jost',sans-serif; font-size:14px; color:#28241e; background:#fff; border:1px solid #d8cfbf; padding:12px 14px; width:100%; resize:vertical;"></textarea>
+            <sc-if value="{{ enquiryError }}" hint-placeholder-val="{{ false }}">
+              <div style="font-size:12.5px; line-height:1.6; color:#a4432c;">Sorry — something went wrong sending your enquiry. Please try again, or email <a href="mailto:hello@cassiskinner.com.au" style="color:#a4432c;">hello@cassiskinner.com.au</a>.</div>
+            </sc-if>
+            <button type="submit" disabled="{{ enquirySending }}" style="font-family:'Jost',sans-serif; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:#f4efe6; background:#28241e; border:none; padding:15px; cursor:pointer;">{{ enquirySendLabel }}</button>
+          </form>
+          <div style="font-size:11px; color:#9b9183; margin-top:16px; line-height:1.6;">Prefer email? <a href="mailto:hello@cassiskinner.com.au?subject=Feast%20enquiry" style="color:#9d5a3a; text-decoration:none;">hello@cassiskinner.com.au</a></div>
+        </sc-if>
       </div>
     </div>
   </sc-if>
@@ -289,7 +301,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;heroImage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Satisfied&quot;,&quot;options&quot;:[&quot;Finished&quot;,&quot;Satisfied&quot;,&quot;Seasoned&quot;,&quot;Mise en Place&quot;,&quot;Mapleton Public House&quot;,&quot;Tres a Cinco&quot;,&quot;Nice Catch&quot;,&quot;Eggs &amp; Flour&quot;,&quot;Tomahawk&quot;,&quot;Hot &amp; Cold&quot;,&quot;Croissant&quot;,&quot;Croissant Finished&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;galleryLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Two per row&quot;,&quot;options&quot;:[&quot;One per row&quot;,&quot;Two per row&quot;,&quot;Three per row&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
-  state = { scrolled: false, menuOpen: false, lightboxIndex: null, enquiryIndex: null, winW: (typeof window !== "undefined" ? window.innerWidth : 1280) };
+  state = { scrolled: false, menuOpen: false, lightboxIndex: null, enquiryIndex: null, enquirySending: false, enquirySent: false, enquiryError: false, winW: (typeof window !== "undefined" ? window.innerWidth : 1280) };
 
   works = [
     { title: "Finished",              src: "assets/cleared.jpg",                        resId: "cleared",         heroPos: "center 45%", meta: "Oil on Canvas · 40.7 × 30.5 cm (16 × 12 in)",  price: "$650" },
@@ -340,8 +352,21 @@ class Component extends DCLogic {
   toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
   closeMenu = () => this.setState({ menuOpen: false });
 
-  openEnquiry = (i) => this.setState({ enquiryIndex: i, lightboxIndex: null, menuOpen: false });
+  openEnquiry = (i) => this.setState({ enquiryIndex: i, lightboxIndex: null, menuOpen: false, enquirySent: false, enquiryError: false, enquirySending: false });
   closeEnquiry = () => this.setState({ enquiryIndex: null });
+  // Submit via fetch so the visitor stays on-site and sees an inline success message (no Formspree page).
+  submitEnquiry = (ev) => {
+    ev.preventDefault();
+    const form = ev.currentTarget;
+    const data = new FormData(form);
+    this.setState({ enquirySending: true, enquiryError: false });
+    fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } })
+      .then((r) => {
+        if (r.ok) this.setState({ enquirySent: true, enquirySending: false });
+        else this.setState({ enquiryError: true, enquirySending: false });
+      })
+      .catch(() => this.setState({ enquiryError: true, enquirySending: false }));
+  };
   // Fired from a gallery card's "Enquire" link — find which work from the card's title, without per-card handlers.
   enquire = (ev) => {
     if (ev && ev.stopPropagation) ev.stopPropagation();
@@ -383,8 +408,14 @@ class Component extends DCLogic {
       enquire: this.enquire,
       enquireActive: this.enquireActive,
       closeEnquiry: this.closeEnquiry,
+      submitEnquiry: this.submitEnquiry,
       stopEnq: (e) => e.stopPropagation(),
       enquiryOpen: enq !== null,
+      enquiryFormVisible: enq !== null && !this.state.enquirySent,
+      enquirySent: this.state.enquirySent,
+      enquiryError: this.state.enquiryError,
+      enquirySending: this.state.enquirySending,
+      enquirySendLabel: this.state.enquirySending ? "Sending…" : "Send enquiry",
       enquiryTitle: enq ? enq.title : "",
       enquiryMeta: enq ? enq.meta : "",
       enquiryPrice: enq ? enq.price : "",
