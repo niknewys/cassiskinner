@@ -62,7 +62,6 @@
     <a href="#top" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:23px; letter-spacing:.02em; text-decoration:none; color:inherit;">Cassi Skinner</a>
     <div data-r="navlinks" style="display:flex; gap:38px; font-size:12.5px; letter-spacing:.2em; text-transform:uppercase;">
       <a data-r="navlink underline" href="#gallery" style="text-decoration:none; color:inherit;">Gallery</a>
-      <a data-r="navlink underline" href="#catalog" style="text-decoration:none; color:inherit;">Catalog</a>
       <a data-r="navlink underline" href="#about" style="text-decoration:none; color:inherit;">About</a>
       <a data-r="navlink underline" href="#contact" style="text-decoration:none; color:inherit;">Contact</a>
     </div>
@@ -77,7 +76,6 @@
     <div style="position:fixed; inset:0; z-index:70; background:#1a140f; color:#f4efe6; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:34px; animation:lbfade .35s ease;">
       <div onClick="{{ closeMenu }}" style="position:absolute; top:26px; right:30px; font-size:30px; font-weight:300; cursor:pointer; line-height:1;">×</div>
       <a onClick="{{ closeMenu }}" href="#gallery" style="font-family:'Cormorant Garamond',serif; font-size:42px; color:inherit; text-decoration:none;">Gallery</a>
-      <a onClick="{{ closeMenu }}" href="#catalog" style="font-family:'Cormorant Garamond',serif; font-size:42px; color:inherit; text-decoration:none;">Catalog</a>
       <a onClick="{{ closeMenu }}" href="#about" style="font-family:'Cormorant Garamond',serif; font-size:42px; color:inherit; text-decoration:none;">About</a>
       <a onClick="{{ closeMenu }}" href="#contact" style="font-family:'Cormorant Garamond',serif; font-size:42px; color:inherit; text-decoration:none;">Contact</a>
     </div>
@@ -111,139 +109,91 @@
     </div>
     <div data-r="gallery-cols" style="column-count:{{ galleryCols }}; column-gap:30px; max-width:{{ galleryMaxW }}; margin:0 auto;">
       <div data-r="ghover" onClick="{{ o0 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/the-sharing-table.jpg" alt="The Sharing Table" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">The Sharing Table</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/cleared.jpg" alt="Finished by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Finished</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$650</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 40.7 × 30.5 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o1 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/candlelight.jpg" alt="Candlelight" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Candlelight</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/empty-plates.jpg" alt="Satisfied by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Satisfied</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$650</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 30.5 × 40.7 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o2 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/seasoning.jpg" alt="Seasoning" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Seasoning</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/seasoning.jpg" alt="Seasoned by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Seasoned</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$1,400</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 61 × 45 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o3 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/by-the-window.jpg" alt="By the Window" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">By the Window</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/by-the-window.jpg" alt="Mise en Place by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Mise en Place</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$1,400</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 61 × 45 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o4 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/the-catch.jpg" alt="The Catch" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">The Catch</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/candlelight.jpg" alt="Mapleton Public House by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Mapleton Public House</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$1,400</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 45.7 × 61 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o5 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/fresh-pasta.jpg" alt="Fresh Pasta" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Fresh Pasta</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/the-sharing-table.jpg" alt="Tres a Cinco by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Tres a Cinco</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$2,100</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 61 × 91.5 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o6 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/the-cut.jpg" alt="The Cut" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">The Cut</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/the-catch.jpg" alt="Nice Catch by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Nice Catch</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$1,100</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 50.9 × 50.9 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o7 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/empty-plates.jpg" alt="Empty Plates" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Empty Plates</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/fresh-pasta.jpg" alt="Eggs &amp; Flour by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Eggs &amp; Flour</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$1,100</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 50.9 × 50.9 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
       <div data-r="ghover" onClick="{{ o8 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
-        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/cleared.jpg" alt="Cleared" style="width:100%; display:block;"></div>
-        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:11px; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Cleared</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/the-cut.jpg" alt="Tomahawk by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Tomahawk</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$950</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 40.7 × 40.7 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
+      </div>
+      <div data-r="ghover" onClick="{{ o9 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/placeholder-hot-and-cold.svg" alt="Hot &amp; Cold by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Hot &amp; Cold</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$1,600</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 76 × 50.9 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
+      </div>
+      <div data-r="ghover" onClick="{{ o10 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/placeholder-croissant.svg" alt="Croissant by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Croissant</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$350</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 30 × 30 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
+      </div>
+      <div data-r="ghover" onClick="{{ o11 }}" style="break-inside:avoid; margin-bottom:30px; cursor:pointer;">
+        <div style="overflow:hidden; background:#e6e0d4;"><img src="assets/placeholder-croissant-finished.svg" alt="Croissant Finished by Cassi Skinner" style="width:100%; display:block;"></div>
+        <div style="margin-top:11px;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px;"><div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#3a342c;">Croissant Finished</div><div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:#28241e; white-space:nowrap;">$350</div></div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:3px;"><div style="font-size:11px; letter-spacing:.03em; color:#9b9183;">Oil on Canvas · 30 × 30 cm</div><div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#b3a999; white-space:nowrap;">Enlarge</div></div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- ================= CATALOG / PRICE LIST ================= -->
-  <div id="catalog" data-r="pad" style="padding:8px 64px 120px; max-width:1320px; margin:0 auto; scroll-margin-top:80px;">
-    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px; border-top:1px solid rgba(33,29,24,.14); padding-top:30px;">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; margin:0;">Catalog</h2>
-      <div style="font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#9b9183;">Feast · Available Works</div>
-    </div>
-
-    <div style="margin-top:12px;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Finished</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 40.7 × 30.5 cm&nbsp; ·&nbsp; 16 × 12 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$650</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Satisfied</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 30.5 × 40.7 cm&nbsp; ·&nbsp; 12 × 16 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$650</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Seasoned</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 61 × 45 cm&nbsp; ·&nbsp; 24 × 18 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$1,400</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Mise en Place</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 61 × 45 cm&nbsp; ·&nbsp; 24 × 18 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$1,400</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Mapleton Public House</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 45.7 × 61 cm&nbsp; ·&nbsp; 18 × 24 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$1,400</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Tres a Cinco</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 61 × 91.5 cm&nbsp; ·&nbsp; 24 × 36 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$2,100</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Nice Catch</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 50.9 × 50.9 cm&nbsp; ·&nbsp; 20 × 20 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$1,100</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Eggs &amp; Flour</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 50.9 × 50.9 cm&nbsp; ·&nbsp; 20 × 20 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$1,100</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Tomahawk</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 40.7 × 40.7 cm&nbsp; ·&nbsp; 16 × 16 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$950</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Hot &amp; Cold</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 76 × 50.9 cm&nbsp; ·&nbsp; 30 × 20 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$1,600</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Croissant</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 30 × 30 cm&nbsp; ·&nbsp; 12 × 12 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$350</div>
-      </div>
-      <div style="display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:22px 0; border-bottom:1px solid rgba(33,29,24,.12);">
-        <div style="flex:1 1 auto; min-width:0;">
-          <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#3a342c;">Croissant Finished</div>
-          <div style="font-size:12.5px; letter-spacing:.06em; color:#8a8073; margin-top:6px;">Oil on Canvas&nbsp; ·&nbsp; 30 × 30 cm&nbsp; ·&nbsp; 12 × 12 in</div>
-        </div>
-        <div style="font-family:'Cormorant Garamond',serif; font-size:21px; color:#28241e; white-space:nowrap;">$350</div>
-      </div>
-    </div>
-
-    <p style="margin:34px 0 0; font-weight:300; font-size:15px; line-height:1.9; color:#7c7264; max-width:660px;">All prices include hardwood timber frame &amp; hanging hardware. Local delivery is free. Postage to other areas at buyer's expense.</p>
+    <p style="margin:48px 0 0; padding-top:28px; border-top:1px solid rgba(33,29,24,.14); font-weight:300; font-size:15px; line-height:1.9; color:#7c7264; max-width:680px;">All prices include hardwood timber frame &amp; hanging hardware. Local delivery is free. Postage to other areas at buyer's expense.</p>
   </div>
 
   <!-- ================= ABOUT ================= -->
@@ -260,7 +210,7 @@
         <p style="margin:0 0 36px; font-weight:300; font-size:17px; line-height:1.95; color:#544c41;">Cassi holds a Bachelor degree in Design &amp; Marketing and has taught at Art School Co for the past eight years. <em style="font-style:italic; color:#3a342c;">Feast</em> is her first body of work.</p>
         <div style="display:flex; gap:40px; border-top:1px solid rgba(33,29,24,.16); padding-top:26px; flex-wrap:wrap;">
           <div>
-            <div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:#28241e;">9</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:#28241e;">12</div>
             <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#9b9183; margin-top:3px;">Works in Feast</div>
           </div>
           <div>
@@ -304,28 +254,32 @@
       <div onClick="{{ nextStop }}" style="position:absolute; right:24px; top:50%; transform:translateY(-50%); font-size:30px; color:#f4efe6; cursor:pointer; padding:18px; user-select:none;">›</div>
       {{ lightboxImg }}
       <div style="margin-top:22px; text-align:center; color:#f4efe6;">
-        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:24px;">{{ activeTitle }}</div>
-        <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#a99e8d; margin-top:6px;">{{ activeCounter }} · Oil &amp; Gouache</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:24px;">{{ activeTitle }} <span style="font-style:normal; color:#f0c9ae;">· {{ activePrice }}</span></div>
+        <div style="font-size:12px; letter-spacing:.06em; color:#cabfae; margin-top:8px;">{{ activeMeta }}</div>
+        <div style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#a99e8d; margin-top:6px;">{{ activeCounter }}</div>
       </div>
     </div>
   </sc-if>
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;heroImage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Empty Plates&quot;,&quot;options&quot;:[&quot;The Sharing Table&quot;,&quot;Candlelight&quot;,&quot;Seasoning&quot;,&quot;By the Window&quot;,&quot;The Catch&quot;,&quot;Fresh Pasta&quot;,&quot;The Cut&quot;,&quot;Empty Plates&quot;,&quot;Cleared&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;galleryLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Two per row&quot;,&quot;options&quot;:[&quot;One per row&quot;,&quot;Two per row&quot;,&quot;Three per row&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroImage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Satisfied&quot;,&quot;options&quot;:[&quot;Finished&quot;,&quot;Satisfied&quot;,&quot;Seasoned&quot;,&quot;Mise en Place&quot;,&quot;Mapleton Public House&quot;,&quot;Tres a Cinco&quot;,&quot;Nice Catch&quot;,&quot;Eggs &amp; Flour&quot;,&quot;Tomahawk&quot;,&quot;Hot &amp; Cold&quot;,&quot;Croissant&quot;,&quot;Croissant Finished&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;galleryLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Two per row&quot;,&quot;options&quot;:[&quot;One per row&quot;,&quot;Two per row&quot;,&quot;Three per row&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   state = { scrolled: false, menuOpen: false, lightboxIndex: null, winW: (typeof window !== "undefined" ? window.innerWidth : 1280) };
 
   works = [
-    { title: "The Sharing Table", src: "assets/the-sharing-table.jpg", resId: "theSharingTable", heroPos: "center 40%" },
-    { title: "Candlelight",       src: "assets/candlelight.jpg",       resId: "candlelight",     heroPos: "center 42%" },
-    { title: "Seasoning",         src: "assets/seasoning.jpg",         resId: "seasoning",       heroPos: "center 40%" },
-    { title: "By the Window",     src: "assets/by-the-window.jpg",     resId: "byTheWindow",     heroPos: "center 52%" },
-    { title: "The Catch",         src: "assets/the-catch.jpg",         resId: "theCatch",        heroPos: "center" },
-    { title: "Fresh Pasta",       src: "assets/fresh-pasta.jpg",       resId: "freshPasta",      heroPos: "center" },
-    { title: "The Cut",           src: "assets/the-cut.jpg",           resId: "theCut",          heroPos: "center 45%" },
-    { title: "Empty Plates",      src: "assets/empty-plates.jpg",      resId: "emptyPlates",     heroPos: "center 45%" },
-    { title: "Cleared",           src: "assets/cleared.jpg",           resId: "cleared",         heroPos: "center 45%" },
+    { title: "Finished",              src: "assets/cleared.jpg",                        resId: "cleared",         heroPos: "center 45%", meta: "Oil on Canvas · 40.7 × 30.5 cm (16 × 12 in)",  price: "$650" },
+    { title: "Satisfied",             src: "assets/empty-plates.jpg",                   resId: "emptyPlates",     heroPos: "center 45%", meta: "Oil on Canvas · 30.5 × 40.7 cm (12 × 16 in)",  price: "$650" },
+    { title: "Seasoned",              src: "assets/seasoning.jpg",                      resId: "seasoning",       heroPos: "center 40%", meta: "Oil on Canvas · 61 × 45 cm (24 × 18 in)",      price: "$1,400" },
+    { title: "Mise en Place",         src: "assets/by-the-window.jpg",                  resId: "byTheWindow",     heroPos: "center 52%", meta: "Oil on Canvas · 61 × 45 cm (24 × 18 in)",      price: "$1,400" },
+    { title: "Mapleton Public House", src: "assets/candlelight.jpg",                    resId: "candlelight",     heroPos: "center 42%", meta: "Oil on Canvas · 45.7 × 61 cm (18 × 24 in)",    price: "$1,400" },
+    { title: "Tres a Cinco",          src: "assets/the-sharing-table.jpg",              resId: "theSharingTable", heroPos: "center 40%", meta: "Oil on Canvas · 61 × 91.5 cm (24 × 36 in)",    price: "$2,100" },
+    { title: "Nice Catch",            src: "assets/the-catch.jpg",                      resId: "theCatch",        heroPos: "center",     meta: "Oil on Canvas · 50.9 × 50.9 cm (20 × 20 in)",  price: "$1,100" },
+    { title: "Eggs & Flour",          src: "assets/fresh-pasta.jpg",                    resId: "freshPasta",      heroPos: "center",     meta: "Oil on Canvas · 50.9 × 50.9 cm (20 × 20 in)",  price: "$1,100" },
+    { title: "Tomahawk",              src: "assets/the-cut.jpg",                        resId: "theCut",          heroPos: "center 45%", meta: "Oil on Canvas · 40.7 × 40.7 cm (16 × 16 in)",  price: "$950" },
+    { title: "Hot & Cold",            src: "assets/placeholder-hot-and-cold.svg",       resId: "hotAndCold",      heroPos: "center",     meta: "Oil on Canvas · 76 × 50.9 cm (30 × 20 in)",   price: "$1,600" },
+    { title: "Croissant",             src: "assets/placeholder-croissant.svg",          resId: "croissant",       heroPos: "center",     meta: "Oil on Canvas · 30 × 30 cm (12 × 12 in)",      price: "$350" },
+    { title: "Croissant Finished",    src: "assets/placeholder-croissant-finished.svg", resId: "croissantFinished", heroPos: "center",   meta: "Oil on Canvas · 30 × 30 cm (12 × 12 in)",      price: "$350" },
   ];
 
   resolveSrc(w) {
@@ -368,7 +322,7 @@ class Component extends DCLogic {
     const active = open ? this.works[lightboxIndex] : null;
 
     // — Tweakable hero image (rendered as an element so no literal src hole streams) —
-    const heroTitle = this.props.heroImage ?? "Candlelight";
+    const heroTitle = this.props.heroImage ?? "Satisfied";
     const hero = this.works.find((x) => x.title === heroTitle) || this.works[0];
     const heroImg = React.createElement("img", {
       src: this.resolveSrc(hero),
@@ -404,6 +358,8 @@ class Component extends DCLogic {
       activeSrc: active ? active.src : "",
       lightboxImg: open ? React.createElement("img", { src: this.resolveSrc(active), alt: active.title, style: { maxWidth: "88vw", maxHeight: "78vh", objectFit: "contain", boxShadow: "0 30px 80px rgba(0,0,0,.5)", animation: "lbzoom .35s cubic-bezier(.2,.7,.2,1)" } }) : null,
       activeTitle: active ? active.title : "",
+      activeMeta: active ? active.meta : "",
+      activePrice: active ? active.price : "",
       activeCounter: open ? `${lightboxIndex + 1} / ${this.works.length}` : "",
     };
   }

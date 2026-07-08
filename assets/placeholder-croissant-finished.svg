@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Croissant Finished — image coming soon">
+  <rect width="300" height="300" fill="#e6e0d4"/>
+  <rect x="16" y="16" width="268" height="268" fill="none" stroke="#c9bfae" stroke-width="1.5"/>
+  <text x="150" y="136" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="28" fill="#8a8073">Croissant</text>
+  <text x="150" y="166" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="28" fill="#8a8073">Finished</text>
+  <text x="150" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="11" letter-spacing="3" fill="#b3a999">IMAGE COMING SOON</text>
+</svg>
