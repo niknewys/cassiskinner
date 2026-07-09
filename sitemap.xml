@@ -51,5 +51,20 @@
       <image:title>Tomahawk</image:title>
       <image:caption>Original oil on canvas painting by Cassi Skinner.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://cassiskinner.com.au/assets/hot-and-cold.jpg</image:loc>
+      <image:title>Hot &amp; Cold</image:title>
+      <image:caption>Original oil on canvas painting by Cassi Skinner.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cassiskinner.com.au/assets/croissant.jpg</image:loc>
+      <image:title>Croissant</image:title>
+      <image:caption>Original oil on canvas painting by Cassi Skinner.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://cassiskinner.com.au/assets/croissant-finished.jpg</image:loc>
+      <image:title>Croissant Finished</image:title>
+      <image:caption>Original oil on canvas painting by Cassi Skinner.</image:caption>
+    </image:image>
   </url>
 </urlset>
